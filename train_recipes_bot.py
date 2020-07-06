@@ -13,3 +13,4 @@ from keras.optimizers import SGD
 import random
 
 print("Hello")
+print("Hey, you!")
