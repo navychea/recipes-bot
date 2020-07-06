@@ -1,1 +1,0 @@
-print("Hello, little girl!")
