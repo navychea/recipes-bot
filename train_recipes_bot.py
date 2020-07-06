@@ -14,4 +14,3 @@ import random
 
 print("Hello")
 print("Hey, you!")
-print("Hi")
