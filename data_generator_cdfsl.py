@@ -23,6 +23,18 @@ class Database(ABC):
         self.train_folders, self.val_folders, self.test_folders = self.get_train_val_test_folders()
         self.input_shape = self.get_input_shape()
 
+    
+
+    def convert_to_dict(self, folders):
+        if type(folders) == list:
+            classes = dict()
+            for folder in folders:
+                instances = [os.path.join(folder, file_name) for file_name in os.listdir(folder)]
+                classes[folder] = instances
+
+            folders = classes
+        return folders
+
     @abstractmethod
     def get_class(self):
         pass
